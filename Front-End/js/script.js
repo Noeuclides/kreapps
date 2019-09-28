@@ -1,4 +1,3 @@
-let map = document.querySelector(".map");
-map.addEventListener("click", function () {
+document.querySelector("#map").addEventListener("click", function () {
     console.log("hello")
 });
