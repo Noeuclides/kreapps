@@ -1,21 +1,91 @@
-.dropdown {
-  margin: 1rem;
+body{
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: hidden;
 }
+
 
 
 #map {
-    height: 75vh;
-    width: 90vw;
-    margin: auto;
+    height: 70vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+   box-shadow:         3px 3px 5px 6px #ccc;
 }
 
 
+.atention {
+    padding: 1rem;
+    color:#2B3494;
+}
 
-@media (min-width: 600px) {
-  .form-inline .form-control {
-    min-width: 40vw;
+.cont {
+    background-color:#2B3494!important;
+    opacity: 0.9;
+    font-family: 'Vesper Libre', serif;
+}
+.cont h3{
+    margin:auto;
+    text-align: center;
+    color: #ccc;
+    padding: 1rem 0;
+    font-family: 'Vesper Libre', serif;
+}
+.cont h5 {
+    font-size: 1.2rem;
+    margin:auto;
+    padding: 1rem 0;
+    color: #ccc;
+    font-family: 'Vesper Libre', serif;
+}
+
+.svg {
+    margin: auto 0;
+}
+.ecg{
+    margin: auto 0;
+    width: 100%;
+    opacity: 1;
+    stroke-dasharray: 600;
+    animation: ecg 1.5s linear forwards infinite,
+               fade 1.5s linear infinite;
   }
+  @keyframes ecg{
+    to {
+      stroke-dashoffset: -1200;
+    }
+  }
+  @keyframes fade{
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
 }
+
+.jumbotron {
+    margin: 2rem 0.5rem;
+    border-radius: 5%;
+    color:  rgba(255,255,255,.5);
+    background-color: rgba(29, 39, 148, 0.719)!important;
+}
+
+.bg-info {
+    background-color: #2B3494!important;
+}
+
+.jum-features {
+    background-color: rgb(228, 228, 228);
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 @media (max-width: 420px) {
   .dropdown {
@@ -29,7 +99,6 @@
 
 @media (min-width: 1000px) {
     .form-inline .form-control {
-        margin: auto;
-      min-width: 65vw;
+      min-width: 40vw;
     }
 }
