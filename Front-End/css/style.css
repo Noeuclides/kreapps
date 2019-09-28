@@ -1,0 +1,35 @@
+.dropdown {
+  margin: 1rem;
+}
+
+
+#map {
+    height: 75vh;
+    width: 90vw;
+    margin: auto;
+}
+
+
+
+@media (min-width: 600px) {
+  .form-inline .form-control {
+    min-width: 40vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .dropdown {
+    margin: 1rem 1.5rem;
+  }
+  #map {
+    width: 90vw;
+    min-height: 65vh;
+  }
+}
+
+@media (min-width: 1000px) {
+    .form-inline .form-control {
+        margin: auto;
+      min-width: 65vw;
+    }
+}
