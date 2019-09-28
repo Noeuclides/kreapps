@@ -2,6 +2,18 @@ document.querySelector('#map').addEventListener('click', function () {
   console.log('hello');
 });
 
+// using the backend for the names
+const getNames = () => {
+   fetch('http://localhost:5000/api/v1/hospitals')
+   .then(response => response.json())
+   .then(places => {
+     places.forEach(place => {
+       document.getElementById('lista_eps').append(`${place.name}`)
+       console.log(place)
+     })
+   })
+}
+
 // get data ESE Antioquia
 const placesInfo = [];
 const getData = () => {
@@ -10,7 +22,6 @@ const getData = () => {
     .then(places => {
       // console.log(places);
       places.forEach(place => {
-        console.log(place);
         const pointPosition = {
           lat: parseFloat(place.latitude),
           lng: parseFloat(place.longitude)
@@ -38,15 +49,17 @@ const getData = () => {
 // fucntion draw map
 const drawMap = (object) => {
   // current position
+  var iconBase = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
   const map = new google.maps.Map(document.getElementById('map'), {
     // center on place user
     center: object,
-    zoom: 6
+    zoom: 11
   });
   // create marker in current position of user
   const markerUser = new google.maps.Marker({
     position: object,
-    title: 'Current Position'
+    title: 'Current Position', 
+    icon: iconBase + 'library_maps.png'
   });
   // assign Marker to map
   markerUser.setMap(map);
@@ -55,8 +68,10 @@ const drawMap = (object) => {
     return new google.maps.Marker({
       position: place.position,
       title: place.name,
-      map: map
+      map: map,
+      icon: iconBase + 'info-i_maps.png'
     });
   });
 };
 getData();
+getNames();

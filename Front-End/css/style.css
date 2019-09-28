@@ -4,7 +4,10 @@ body{
     overflow-y: hidden;
 }
 
-
+.div-list {
+  max-height: 40vh;
+  overflow-y: scroll;
+}
 
 #map {
     height: 70vh;
