@@ -8,7 +8,7 @@ body{
 
 #map {
     height: 70vh;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     border-radius: 10px;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
@@ -23,6 +23,7 @@ body{
 }
 
 .cont {
+    height: 13vh;
     background-color:#2B3494!important;
     opacity: 0.9;
     font-family: 'Vesper Libre', serif;
@@ -31,13 +32,13 @@ body{
     margin:auto;
     text-align: center;
     color: #ccc;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     font-family: 'Vesper Libre', serif;
 }
 .cont h5 {
     font-size: 1.2rem;
     margin:auto;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     color: #ccc;
     font-family: 'Vesper Libre', serif;
 }
